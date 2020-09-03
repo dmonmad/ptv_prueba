@@ -59,7 +59,7 @@ class FormularioController extends AbstractController
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
-        $dompdf->stream("testpdf.pdf", [
+        $dompdf->stream("justificante.pdf", [
             "Attachment" => true
         ]);
 
