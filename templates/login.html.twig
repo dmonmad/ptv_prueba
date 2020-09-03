@@ -1,0 +1,31 @@
+{# templates/base.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+	<div class="container d-flex h-100">
+		<div class="row align-self-center w-100">
+			<div class="col-6 mx-auto">
+				<div class="login">
+					<h1 class="display-4">Login</h1>
+					<form action="{{ path('formulario') }}">
+						<div class="form-group">
+							<label for="userInput">Usuario</label>
+							<input name="user" type="text" class="form-control" id="userInput" placeholder="Numero de usuario" value="13242">
+						</div>
+						<div class="form-group">
+							<label for="dniInput">DNI</label>
+							<input name="dni" type="text" class="form-control" id="dniInput" placeholder="DNI" value="44358696E">
+						</div>
+						<button type="submit" class="btn btn-primary">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
